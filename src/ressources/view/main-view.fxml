@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController"
+            styleClass="app-root">
+
+    <top>
+        <HBox styleClass="app-header" alignment="CENTER_LEFT" spacing="12">
+            <Label text="🍴" styleClass="brand-logo"/>
+            <VBox alignment="CENTER_LEFT">
+                <Label fx:id="lblNom" styleClass="brand-nom"/>
+                <Label text="Gestion de restaurant" styleClass="brand-sous"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblTables" styleClass="header-chip"/>
+            <Label fx:id="lblCa" styleClass="header-chip"/>
+            <Label fx:id="lblAlertes" styleClass="header-chip"/>
+            <Label fx:id="lblHorloge" styleClass="header-horloge"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" styleClass="main-tab-pane"/>
+    </center>
+
+</BorderPane>
